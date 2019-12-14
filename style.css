@@ -327,7 +327,7 @@ a:visited{
         transform: translateY(0px);
     }
 }
-@media (min-width:769px){
+@media (min-width:800px){
     .header li{
         float:left;
     }
@@ -348,6 +348,7 @@ a:visited{
 }
 
 @media (max-width:768px){
+   
     .header .logo{
         margin-left:25%;
     }
@@ -367,18 +368,19 @@ a:visited{
         margin-right: 0px;
     }
     .container{
-        flex-direction: column;
+        flex-direction: row;
         height:280vh;
     }
     .left{
         margin-top:50px;
         font-size:1.7em;
         box-shadow: -1px 6px 14px 0px rgba(0,0,0,0.75);
+        
     }
     .right{
         margin-top:0px;
         box-shadow: -1px 6px 14px 0px rgba(0,0,0,0.75);
-
+        float:left;
     }
     .services{
         height:80%;
@@ -429,5 +431,6 @@ a:visited{
     }
     .ikona{
         margin-top:20px;
+        font-size:8em;
     }
 }
