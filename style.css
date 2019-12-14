@@ -1,0 +1,433 @@
+body{
+    box-sizing:border-box;
+    background:rgba(125, 212, 191,.4);
+    color:white;
+    height:100vh;
+    width:100%;
+    font-family: 'Cutive Mono', monospace;
+    font-size:14px;
+}
+*{
+    margin:0;
+    padding:0;
+
+}
+a:link{
+    color:white;
+    text-decoration: none;
+}
+a:visited{
+    color:white;
+    text-decoration: none;
+}
+.header{
+    background:rgb(49, 49, 63);
+    position:fixed;
+    width:100%;
+    z-index:3;
+}
+.header ul{
+    list-style: none;
+    overflow:hidden;
+    
+}
+.header ul a{
+    display:block;
+    padding:20px;
+    text-align: center;
+}
+.header ul a:hover{
+    color:rgb(106, 233, 255);
+    text-decoration: underline;
+}
+.header .logo{
+    float:left;
+    display:block;
+    font-size:2em;
+    margin-left:1%;
+    padding-top:0.5%;
+    font-size:2.3em;
+    animation-duration: 1.5s;
+    animation-name:logo;
+    animation-fill-mode: backwards;
+    animation-delay:1s;
+    
+}
+.header .linia{
+    margin:0;
+    padding: 0;
+    margin-top:2px;
+    width:2px;
+    height:50px;
+    float:left;
+    margin-left:50px;
+    background:rgb(106, 233, 255);
+    animation-name:pasek;
+    animation-duration:2s;
+}
+.header .logo span{
+    color:rgb(106, 233, 255);
+}
+.header .menu{
+    clear:both;
+    max-height:0;
+    transition:max-height .5s ease-out;
+    margin-right:100px;
+    animation-name:menu;
+    animation-duration:1.5s;
+    animation-delay:1s;
+    animation-fill-mode: backwards;
+}
+.header .menu-icon{
+    
+    padding:28px 20px;
+    position:relative;
+    float: right;
+    cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+    background:grey;
+    display:block;
+    height:2px;
+    width:18px;
+    position:relative;
+    transition: background .2s ease-out;
+
+}
+.header .menu-icon .nav-icon:before{
+    background:grey;
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:block;
+    transition: all .2 ease-out;
+    top:5px;
+}
+.header .menu-icon .nav-icon:after{
+    background:grey;
+    content:'';
+    transition: all .2 ease-out;
+    width:100%;
+    height:100%;
+    position:absolute;
+    display:block;
+    bottom:5px;
+}
+.header .menu-btn{
+    display:none;
+}
+.header .menu-btn:checked ~ .menu{
+    max-height:240px;
+}
+.container{
+    width:80%;
+    height:100%;
+    
+    margin:0 auto;
+    display:Flex;
+    flex-wrap: wrap;
+}
+.left{
+    flex:1;
+    color:rgb(214, 217, 235);
+    margin-top:100px;
+    padding:15px;
+    font-size:1.7em;
+    background:rgb(49, 49, 63);
+    box-shadow: -6px 0px 8px 0px rgba(0,0,0,0.75);
+    animation-name:left;
+    animation-duration:1.5s;
+    animation-delay:1s;
+    animation-fill-mode: backwards;
+
+}
+.left p
+{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:15px;
+}
+.left ul {
+    margin-left:20px;
+    margin-top:-20px;
+}
+.left img{
+    width:80%;
+    height:170px;
+    margin-top:15px;
+    margin-left:10%;
+}
+.right{
+  flex:1;
+    background:rgb(106, 233, 255);
+    box-shadow: 4px 0px 8px 0px rgba(0,0,0,0.75);
+    margin-top:100px;
+    animation-name:left;
+    animation-duration:1.5s;
+    animation-delay:1.5s;
+    animation-fill-mode: backwards;
+}
+.services{
+    width:100%;
+    height:80%;
+}
+.flex{
+    width:100%;
+    height:80%;
+    display:flex;
+}
+.socials{
+    width:100%;
+    height: 1;
+    text-align:center;
+   
+}
+.socials .fab{
+    font-size:5em;
+    margin-top:-3px;
+    padding-left:50px;
+    color:rgb(49, 49, 63);
+}
+.socials .fa-facebook-f:hover{
+    color:rgb(74, 89, 221);
+}
+.socials .fa-twitter:hover{
+    color:rgb(0, 140, 255);
+}
+.socials .fa-github:hover{
+    color:purple;
+}
+.one{
+    flex:1;
+    animation-name:one;
+    animation-duration:1.5s;
+    animation-delay:2s;
+    animation-fill-mode: backwards;
+    display:flex;
+    flex-direction: column;
+}
+.one:hover .fab{
+    color:rgb(64, 74, 216);
+    animation-name:ikona;
+    animation-duration: 1s;
+}
+.two:hover .fab{
+    color:rgb(44, 214, 52);
+    animation-name:ikona;
+    animation-duration: 1s;
+}
+.three:hover .fab{
+    color:yellow;
+    animation-name:ikona;
+    animation-duration: 1s;
+}
+.ikona{
+    flex:2;
+    
+    font-size:8em;
+    color:rgb(49, 49, 63);
+    text-align: center;
+}
+.fab{
+    margin-top: 10%;
+}
+.podpis{
+    flex:3;
+    color:Black;
+    font-size:1.5em;
+    border-right:1px dotted rgb(49, 49, 63);
+    padding:2px;
+}
+.podpis p{
+    text-align: center;
+    color:rgb(49, 49, 63);
+    font-weight: bold;
+}
+.two{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    animation-name:one;
+    animation-duration:1.5s;
+    animation-delay:2.3s;
+    animation-fill-mode: backwards;
+    
+}
+.three{
+    flex:1;
+    display:flex;
+    flex-direction: column;
+    animation-name:one;
+    animation-duration:1.5s;
+    animation-delay:2.5s;
+    animation-fill-mode: backwards;
+}
+.tytul{
+    font-size:3em;
+    text-align: center;
+    color:black;
+    
+}
+
+
+@keyframes pasek{
+    0%{
+        width:2px;
+        height:0;
+    }
+    100%{
+        width:2px;
+        height:50px;
+    }
+}
+@keyframes logo{
+    0%{
+        transform: translateY(-200px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes menu{
+    0%{
+        opacity:0;
+        transform: translateY(-200px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+@keyframes left{
+    0%{
+        opacity:0;
+        
+    }
+    100%{
+        opacity:1;
+        
+    }
+}
+@keyframes ikona{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes one{
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@media (min-width:769px){
+    .header li{
+        float:left;
+    }
+   
+    .header li a{
+        padding:20px 30px;
+    }
+    .header .menu {
+        clear:none;
+        float:right;
+        max-height: none;
+        
+    }
+    .header .menu-icon{
+        display:none;
+    }
+    
+}
+
+@media (max-width:768px){
+    .header .logo{
+        margin-left:25%;
+    }
+    .linia{
+        display: none;
+    }
+    .header li a{
+        transition: background .4s;
+    }
+    .header li a:hover{
+        background:rgba(38, 72, 78, 0.4);
+        color:black;
+        font-weight: bold;
+        
+    }
+    .header .menu{
+        margin-right: 0px;
+    }
+    .container{
+        flex-direction: column;
+        height:280vh;
+    }
+    .left{
+        margin-top:50px;
+        font-size:1.7em;
+        box-shadow: -1px 6px 14px 0px rgba(0,0,0,0.75);
+    }
+    .right{
+        margin-top:0px;
+        box-shadow: -1px 6px 14px 0px rgba(0,0,0,0.75);
+
+    }
+    .services{
+        height:80%;
+    }
+    .socials{
+        height: 20%;
+      
+    }
+    .testowy{
+        width:100px;
+        height:100px;
+        background:black;
+    }
+    .tytul{
+        font-size:2.3em;
+    }
+    .flex{
+        flex-direction: column;
+        height: 87%;
+        margin-top:20px;
+    }
+    .one{
+        flex-direction: row;
+        border-bottom:1px dotted purple;
+    }
+    .two{
+        flex-direction: row;
+        margin-top:15px;
+        border-bottom:1px dotted purple;
+    }
+    .three{
+        flex-direction: row;
+        margin-top:15px;
+    }
+    .podpis{
+        padding:0px;
+    }
+    .socials .fab{
+        padding-left:20px;
+        margin-top: 30px;
+        
+    }
+    .left img{
+        width:280px;
+        height:200px;
+        margin-top:25px;
+        margin-left:0px;
+    }
+    .ikona{
+        margin-top:20px;
+    }
+}
