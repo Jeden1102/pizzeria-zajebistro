@@ -1,0 +1,132 @@
+$color1:#002126;
+$color2:#011C32;
+$color3:#00ECEC;
+
+body{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:300vh;
+    overflow:hidden;
+    font-family: 'Zilla Slab', serif;
+    overflow-x: hidden;
+    
+    
+}
+a:link{
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+}
+a:visited{
+    color:black;
+}
+*{
+    margin:0;
+    padding:0;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    background:$color1;
+}
+.baner{
+    width:100%;
+    height:7.5%;
+    background:white;
+    display:flex;
+    align-items: center;
+    vertical-align:center;
+}
+.firma{
+    width:15%;
+    margin-left:10%;
+    height:100%;
+    font-size:2.5em;
+    display:flex;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+}
+.firma span{
+    color:$color3;
+}
+.menu{
+    width:35%;
+    height:100%;
+    
+    font-size:1.6em;
+    display:flex;
+    align-items: center;
+    margin-left:15%;
+}
+.menu ul{
+    list-style: none;
+}
+.menu ul li{
+    float:left;
+    width:150px;
+}
+.burger{
+    width:400px;
+    height:100%;
+    margin-left:15%;
+    display:none;
+}
+.paski{
+    width:50px;
+    height:4px;
+    background:black;
+    margin-top:0px;
+    right:10px;
+    position: absolute;
+}
+.paski::after{
+    content:'';
+    width:50px;
+    height:4px;
+     background:black;
+    transform: translateY(10px);
+    position:absolute;
+}
+.paski::before{
+    content:'';
+    width:50px;
+    height:4px;
+     background:black;
+    transform: translateY(-10px);
+    position:absolute;
+}
+input{
+   display:none;
+}
+.berger2{
+  right:10px;
+   padding:30px;
+    cursor: pointer;
+    position:absolute;
+  
+}
+.menu2{
+    min-width:500px;
+    height:100vh;
+    background:white;
+    margin-top:56px;
+    transform: translateX(-1000px);
+    transition: transform .5s;
+
+}
+.berger:checked ~ .menu2{
+    transform:translateX(-200px);
+}
+.menu2 ul{
+    list-style: none;
+    font-size:3em;
+    text-align: center;
+}
+@media (max-width:1285px){
+    .menu{
+        display:none;
+    }
+    .burger{
+        display:block;
+    }
+}
