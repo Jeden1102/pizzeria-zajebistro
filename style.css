@@ -1,23 +1,47 @@
 body{
-    background:rgb(53, 47, 47);
+    
     padding:0;
     margin:0;
     overflow:hidden;
+    animation-name: wejscie;
+    animation-duration:2s;
+    animation-fill-mode: backwards;
 }
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
+a:link{
+    color:black;
+    text-decoration: none;
+}
+a:visited{
+    color:black;
+    text-decoration: none;
+}
 .kwadrat{
     width:300px;
     height:80vh;
-    background:rgb(73, 168, 73);
-    transform:translateX(-300px);
+    background:rgb(255, 255, 255);
+   transform: translateX(-300px);
     transition:transform 0.5s ease-in-out;
     font-size:2em;
     text-align: center;
     border-radius:0% 0% 30% 0%;
+    
+    position: absolute;
+    left:0;
+    top:100px;
+    
+}
+.kwadrat ul li{
+    line-height:60px;
+    transition: background .4s;
+}
+.kwadrat ul li:hover{
+    background:rgb(93, 203, 223);
+ 
 }
 .button{
     
@@ -30,6 +54,17 @@ body{
 }
 .button:checked ~ .kwadrat{
     transform: translateX(0px);
+}
+.pas{
+    width:3px;
+    height:70px;
+    background:rgb(0, 0, 0);
+    margin-left:10px;
+    margin-top:5px;
+    animation-name: pas;
+    animation-duration:1s;
+    animation-delay:2s;
+    animation-fill-mode: backwards;
 }
 .paski{
     width:50px;
@@ -60,12 +95,14 @@ body{
     transition: transform .5s;
 }
 .button:hover .paski::after{
-    transform: rotateZ(45deg);
+    transform: rotateZ(-60deg);
 }
 .button:hover .paski:before{
-    transform: rotateZ(90deg);
+    transform: rotateZ(60deg);
 }
-
+.button:hover .paski{
+    background:none;
+}
 
 input{
     display:none;
@@ -74,18 +111,23 @@ input{
     width:100vw;
     height:100px;
     background:rgb(64, 201, 211);
-    
+    display:flex;
 }
 .tekst{
     height:100%;
     width:30%;
    font-size:3em;
    padding:15px;
+   animation-name: firma;
+    animation-duration:1s;
+    animation-delay:2.5s;
+    animation-fill-mode: backwards;
 }
 .tekst span{
     color:white;
 
 }
+
 .menu{
     padding:20px;
     width:40%;
@@ -102,11 +144,67 @@ input{
     width:100px;
     font-size:2em;
 }
+.tekst2{
+    font-size:5em;
+    text-align:center;
+    padding-top:20%;
+    animation-name: max;
+    animation-duration:1s;
+    animation-delay:3s;
+    animation-fill-mode: backwards;
+    animation-iteration-count: infinite;
+ 
+}
 @media (max-width:1000px){
     .menu{
         display:none;
     }
     .paski{
         display:block;
+    }
+}
+.container{
+    width:100vw;
+    height:100vh;
+    background:rgb(76, 84, 102);
+}
+@keyframes wejscie {
+    0%{
+        opacity:0;
+        transform: translateY(-2000px);
+    }
+    100%{
+        opacity:1;
+        transform: translateY(0px);
+    }
+}
+@keyframes firma{
+    0%{
+        opacity:0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0px);
+    }
+}
+@keyframes pas{
+    0%{
+        width:1px;
+    height:1px;
+    }
+    100%{
+        width:3px;
+        height:70px;
+    }
+}
+@keyframes max{
+    0%{
+        opacity:0;
+        transform: translateY(-500px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0px);
     }
 }
