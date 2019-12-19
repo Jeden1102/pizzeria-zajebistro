@@ -1,163 +1,112 @@
-body {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
-  height: 300vh;
-  overflow: hidden;
-  font-family: 'Zilla Slab', serif;
-  overflow-x: hidden;
+body{
+    background:rgb(53, 47, 47);
+    padding:0;
+    margin:0;
+    overflow:hidden;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.kwadrat{
+    width:300px;
+    height:80vh;
+    background:rgb(73, 168, 73);
+    transform:translateX(-300px);
+    transition:transform 0.5s ease-in-out;
+    font-size:2em;
+    text-align: center;
+    border-radius:0% 0% 30% 0%;
+}
+.button{
+    
+    padding-right:75px;
+    padding-bottom:40px;
+    position: absolute;
+    right:0;
+    top:20px;
+    
+}
+.button:checked ~ .kwadrat{
+    transform: translateX(0px);
+}
+.paski{
+    width:50px;
+    height:4px;
+    background:black;
+    position: absolute;
+    right:20px;
+    top:20px;
+    display:none;
+    
+}
+.paski::after{
+    content:'';
+    width:50px;
+    height:4px;
+    background:black;
+    transform: translateY(10px);
+    position: absolute;
+    transition: transform .5s;
+}
+.paski::before{
+    content:'';
+    width:50px;
+    height:4px;
+    background:black;
+    transform: translateY(-10px);
+    position: absolute;
+    transition: transform .5s;
+}
+.button:hover .paski::after{
+    transform: rotateZ(45deg);
+}
+.button:hover .paski:before{
+    transform: rotateZ(90deg);
 }
 
-a:link {
-  color: black;
-  text-decoration: none;
-}
 
-a:visited {
-  color: black;
+input{
+    display:none;
 }
+.baner{
+    width:100vw;
+    height:100px;
+    background:rgb(64, 201, 211);
+    
+}
+.tekst{
+    height:100%;
+    width:30%;
+   font-size:3em;
+   padding:15px;
+}
+.tekst span{
+    color:white;
 
-* {
-  margin: 0;
-  padding: 0;
 }
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  background: #002126;
+.menu{
+    padding:20px;
+    width:40%;
+    height:10%;
+    position: absolute;
+    top:0;
+    left:30%;
 }
-
-.baner {
-  width: 100%;
-  height: 7.5%;
-  background: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  vertical-align: center;
+.menu ul{
+    list-style: none;
 }
-
-.firma {
-  width: 15%;
-  margin-left: 10%;
-  height: 100%;
-  font-size: 2.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'Anton', sans-serif;
+.menu ul li{
+    float:left;
+    width:100px;
+    font-size:2em;
 }
-
-.firma span {
-  color: #00ECEC;
+@media (max-width:1000px){
+    .menu{
+        display:none;
+    }
+    .paski{
+        display:block;
+    }
 }
-
-.menu {
-  width: 35%;
-  height: 100%;
-  font-size: 1.6em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 15%;
-}
-
-.menu ul {
-  list-style: none;
-}
-
-.menu ul li {
-  float: left;
-  width: 150px;
-}
-
-.burger {
-  width: 400px;
-  height: 100%;
-  margin-left: 15%;
-  display: none;
-}
-
-.paski {
-  width: 50px;
-  height: 4px;
-  background: black;
-  margin-top: 0px;
-  right: 10px;
-  position: absolute;
-}
-
-.paski::after {
-  content: '';
-  width: 50px;
-  height: 4px;
-  background: black;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-  position: absolute;
-}
-
-.paski::before {
-  content: '';
-  width: 50px;
-  height: 4px;
-  background: black;
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-  position: absolute;
-}
-
-input {
-  display: none;
-}
-
-.berger2 {
-  right: 10px;
-  padding: 30px;
-  cursor: pointer;
-  position: absolute;
-}
-
-.menu2 {
-  min-width: 500px;
-  height: 100vh;
-  background: white;
-  margin-top: 56px;
-  -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
-  -webkit-transition: -webkit-transform .5s;
-  transition: -webkit-transform .5s;
-  transition: transform .5s;
-  transition: transform .5s, -webkit-transform .5s;
-}
-
-.berger:checked ~ .menu2 {
-  -webkit-transform: translateX(-200px);
-          transform: translateX(-200px);
-}
-
-.menu2 ul {
-  list-style: none;
-  font-size: 3em;
-  text-align: center;
-}
-
-@media (max-width: 1285px) {
-  .menu {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-}
-/*# sourceMappingURL=style.css.map */
