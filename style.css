@@ -1,210 +1,365 @@
 body{
-    
-    padding:0;
     margin:0;
+    padding:0;
+    background-image:url('tlo1.jpg');
+    color:white;
+    font-family: 'Poiret One', cursive;
     overflow:hidden;
-    animation-name: wejscie;
-    animation-duration:2s;
-    animation-fill-mode: backwards;
 }
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
-}
-a:link{
-    color:black;
-    text-decoration: none;
-}
-a:visited{
-    color:black;
-    text-decoration: none;
-}
-.kwadrat{
-    width:300px;
-    height:80vh;
-    background:rgb(255, 255, 255);
-   transform: translateX(-300px);
-    transition:transform 0.5s ease-in-out;
-    font-size:2em;
-    text-align: center;
-    border-radius:0% 0% 30% 0%;
-    
-    position: absolute;
-    left:0;
-    top:100px;
-    
-}
-.kwadrat ul li{
-    line-height:60px;
-    transition: background .4s;
-}
-.kwadrat ul li:hover{
-    background:rgb(93, 203, 223);
- 
-}
-.button{
-    
-    padding-right:75px;
-    padding-bottom:40px;
-    position: absolute;
-    right:0;
-    top:20px;
-    
-}
-.button:checked ~ .kwadrat{
-    transform: translateX(0px);
-}
-.pas{
-    width:3px;
-    height:70px;
-    background:rgb(0, 0, 0);
-    margin-left:10px;
-    margin-top:5px;
-    animation-name: pas;
-    animation-duration:1s;
-    animation-delay:2s;
-    animation-fill-mode: backwards;
-}
-.paski{
-    width:50px;
-    height:4px;
-    background:black;
-    position: absolute;
-    right:20px;
-    top:20px;
-    display:none;
-    
-}
-.paski::after{
-    content:'';
-    width:50px;
-    height:4px;
-    background:black;
-    transform: translateY(10px);
-    position: absolute;
-    transition: transform .5s;
-}
-.paski::before{
-    content:'';
-    width:50px;
-    height:4px;
-    background:black;
-    transform: translateY(-10px);
-    position: absolute;
-    transition: transform .5s;
-}
-.button:hover .paski::after{
-    transform: rotateZ(-60deg);
-}
-.button:hover .paski:before{
-    transform: rotateZ(60deg);
-}
-.button:hover .paski{
-    background:none;
-}
-
-input{
-    display:none;
+    list-style-type: none;
 }
 .baner{
     width:100vw;
-    height:100px;
-    background:rgb(64, 201, 211);
-    display:flex;
-}
-.tekst{
-    height:100%;
-    width:30%;
-   font-size:3em;
-   padding:15px;
-   animation-name: firma;
-    animation-duration:1s;
-    animation-delay:2.5s;
-    animation-fill-mode: backwards;
-}
-.tekst span{
-    color:white;
-
+    height:10vh;
+    background:rgba(255,255,255,.3);
 }
 
-.menu{
-    padding:20px;
-    width:40%;
-    height:10%;
+
+/* MENU BOCZNE */
+.middle{
     position: absolute;
-    top:0;
-    left:30%;
-}
-.menu ul{
+    top: 20%;
+    left: 0;
+    transform: translate(-300vw);
+    transition: transform 0.5s;
+    z-index:999;
+  }
+  input{
+    position: absolute;
+    right:20px;
+    top:0px;
+    opacity: 0;
+    width:50px;
+    height:50px;
+    display:block;
+  
+  }
+  .burger{
+    width:50px;
+    height:3px;
+    background:rgb(255, 244, 244);
+    position: absolute;
+    top:20px;
+    right:20px;
+    display:none;
+  }
+  .burger::after{
+    content:'';
+    width:50px;
+    height:3px;
+    background:rgb(255, 255, 255);
+    position: absolute;
+    transform: translateY(10px);
+  }
+  .burger::before{
+    content:'';
+    width:50px;
+    height:3px;
+    background:rgb(255, 255, 255);
+    position: absolute;
+    transform: translateY(-10px);
+    
+  }
+  .burger2{
+    width:50px;
+    height:3px;
+    background:none;
+    position: absolute;
+    top:20px;
+    left:70px;
+  }
+  .burger2::after{
+    content:'';
+    width:50px;
+    height:3px;
+    background:rgb(255, 255, 255);
+    position: absolute;
+    transform: translateY(10px);
+    transform: rotateZ(45deg);
+  }
+  .burger2::before{
+    content:'';
+    width:50px;
+    height:3px;
+    background:rgb(255, 255, 255);
+    position: absolute;
+    transform: translateY(-10px);
+    transform: rotateZ(-45deg);
+  }
+  .check:checked ~ .middle{
+    transform: translateX(0px);
+  }
+  .menu{
+    width: 100vw;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .menu ul{
+      list-style: none;
+  }
+  .menu a{
+      text-decoration: none;
+  }
+  .item{
+    border-top: 1px solid #2980b9;
+    overflow: hidden;
+  }
+  .btn{
+    display: block;
+    padding: 16px 20px;
+    background: #3498db;
+    color: white;
+    position: relative;
+  }
+  .btn:before{
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background:#3498db;
+    left: 20px;
+    bottom: -7px;
+    transform: rotate(45deg);
+  }
+  .btn i{
+    margin-right: 10px;
+  }
+  .smenu{
+    background: #333;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+  }
+  .smenu a{
+    display: block;
+    padding: 16px 26px;
+    color: white;
+    font-size: 14px;
+    margin: 4px 0;
+    position: relative;
+    text-decoration: none;
+  }
+  .smenu a:before{
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #3498db;
+    left: 0;
+    top: 0;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  .smenu a:hover:before{
+    opacity: 1;
+  }
+  .item:target .smenu{
+    max-height: 10em;
+  }
+  /* CCzesc wlasciwa */
+  .baner{
+      display:flex;
+      align-items: center;
+  }
+  .baner .firma{
+      font-size:2.5em;
+      font-family: 'Indie Flower', cursive;
+  }
+  .baner .firma img{
+    width:50px;
+    height:50px;
+  }
+  .baner .firma .span1{
+      color:red;
+  }
+  .baner .firma .span2{
+      color:yellow;
+  }
+  .baner .main-menu{
+      position:absolute;
+      right:50px;
+      z-index:999;
+  }
+  .main-menu ul {
+    margin: 0px;
+    padding: 0px;
     list-style: none;
-}
-.menu ul li{
-    float:left;
-    width:100px;
-    font-size:2em;
-}
-.tekst2{
-    font-size:5em;
-    text-align:center;
-    padding-top:20%;
-    animation-name: max;
-    animation-duration:1s;
-    animation-delay:3s;
-    animation-fill-mode: backwards;
+   }
+   
+   .main-menu ul li {
+    float: left;
+    width: 130px;
+    height: 40px;
+    opacity: .8;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+   }
+   
+   .main-menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+   }
+   
+   .main-menu ul li a:hover {
+    background-color: rgb(148, 189, 53);
+   }
+   
+   .main-menu ul li ul li{
+    display: none;
+   }
+   
+   .main-menu ul li:hover ul li {
+    display: block;
+   }
+   .container{
+     width:80vw;
+     height:90vh;
+     box-shadow: 0px 8px 12px 0px rgba(255,255,255,0.75);
+     margin:0 auto;
+   }
+   /* SLIDER */
+   .slidershow{
+    width: 80vw;
+    height: 400px;
+    overflow: hidden;
+  }
+  .middle2{
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  
+  .slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+    animation-name:animacja;
+    animation-duration:25s;
     animation-iteration-count: infinite;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: .9s;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .slide p{
+    font-size:4em;
+    background:rgba(255,255,255,.3);
+    padding:10px 20px 10px 20px;
+    box-shadow:1px 1px 10px 1px black;
+    color:black;
+    transition: .3s;
+  }
+  .slide p:hover{
+    padding:15px 25px 15px 25px;
+  }
+  .slide a{
+    text-decoration:none;
+  }
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
  
-}
-@media (max-width:1000px){
-    .menu{
-        display:none;
-    }
-    .paski{
-        display:block;
-    }
-}
-.container{
-    width:100vw;
-    height:100vh;
-    background:rgb(76, 84, 102);
-}
-@keyframes wejscie {
+  @keyframes animacja{
     0%{
-        opacity:0;
-        transform: translateY(-2000px);
+      margin-left:0;
+    }
+    10%{
+      margin-left:0;
+    }
+    
+    20%{
+      margin-left:-100%;
+    }
+    30%{
+      margin-left:-100%;
+    }
+    40%{
+      margin-left:-200%;
+    }
+    50%{
+      margin-left:-200%;
+    }
+    60%{
+      margin-left:-300%;
+    }
+    70%{
+      margin-left:-300%;
+    }
+    80%{
+      margin-left:-400%;
+    }
+    90%{
+      margin-left:-400%;
     }
     100%{
-        opacity:1;
-        transform: translateY(0px);
+      margin-left:0;
     }
-}
-@keyframes firma{
-    0%{
-        opacity:0;
-        transform: translateX(-100px);
+  }
+
+  .s1{
+    background-image:url('pizzza1.jpg');
+    background-size:cover;
+    background-position: center;
+  }
+  .s2{
+    background-image:url('pizza5.jpg');
+    background-size:cover;
+    background-position: center;
+  }
+  .s3{
+    background-image:url('pizza4.jpeg');
+    background-size:cover;
+    background-position: center;
+  }
+  .s4{
+    background-image:url('pizza3.jpg');
+    background-size:cover;
+    background-position: center;
+  }
+  .s5{
+    background-image:url('pizza2.jpg');
+    background-size:cover;
+    background-position: center;
+  }
+
+
+
+   @media (max-width:1050px){
+    
+       .main-menu{
+           display:none;
+       }
+       .burger{
+           display:block;
+         
+       }
+   }
+   @media (max-width:550px){
+       .baner{
+           font-size:.8em;
+       }
+       
+       
+   }
+   @media(max-width:450px){
+       .baner{
+           font-size:.7em;
+       }
+       .burger{
+        top:100px;
     }
-    100%{
-        opacity:1;
-        transform: translateX(0px);
-    }
-}
-@keyframes pas{
-    0%{
-        width:1px;
-    height:1px;
-    }
-    100%{
-        width:3px;
-        height:70px;
-    }
-}
-@keyframes max{
-    0%{
-        opacity:0;
-        transform: translateY(-500px);
-    }
-    100%{
-        opacity:1;
-        transform: translateX(0px);
-    }
-}
+   }

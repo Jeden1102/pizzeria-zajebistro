@@ -5,30 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Indie+Flower|Permanent+Marker|Poiret+One&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet"/>
+
 </head>
 <body>
-    <div class="baner">
-        <div class="pas"></div>
-        <div class="tekst">Fajna<span>Strona</span></div>
+    <!-- MENU BOCZNE-->
+    <input class="check" id="check" type="checkbox"/>
+    <label for="check"><div class="burger"></div></label>
+    <div class="middle">
         <div class="menu">
-            <ul>
-                <li><a href="#">Menu1</a></li>
-                <li><a href="#">Menu2</a></li>
-                <li><a href="#">Menu3</a></li>
-            </ul>
+          <li class="item" id='profile'>
+            <a href="#profile" class="btn"><i class="far fa-user"></i>Home</a>
+           
+          </li>
+  
+          <li class="item" id="messages">
+            <a href="#messages" class="btn"><i class="far fa-envelope"></i>About</a>
+            <div class="smenu">
+              <a href="#">Team</a>
+              <a href="#">Our history</a>
+              
+            </div>
+          </li>
+  
+          <li class="item" id="settings">
+            <a href="#settings" class="btn"><i class="fas fa-cog"></i>Menu</a>
+            <div class="smenu">
+              <a href="#">Pizza</a>
+              <a href="#">Lasagne</a>
+              <a href="#">Sides & Drinks</a>
+            </div>
+          </li>
+  
+          <li class="item">
+            <a class="btn" href="#"><i class="fas fa-sign-out-alt"></i>Contact</a>
+          </li>
         </div>
-    <input type="checkbox" class="button" id="button">
-    <label id="button" class="button" for="button"><div class="paski"></div></label>
-    <div class="kwadrat">
-        <ul>
-            <li><a href="#">Menu1</a> </li>
-            <li><a href="#">Menu2</a></li>
-            <li><a href="#">Menu3</a></li>
-        </ul>
+      </div>
+      <!--TRESC WLASCIWA-->
+    <div class="baner">
+        <div class="firma"><img src="logo.png"/>Pizzeria<span class="span1"> Parmegiano</span>-<span class="span2">Rigiano</span></div>
+        <div class="main-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a>
+                 <ul>
+                  <li><a href="">Our Team</a></li>
+                  <li><a href="">Whatever</a></li>
+                 </ul>
+                </li>
+               
+                <li><a href="#">Menu</a>
+                 <ul>
+                  <li><a href="">Pizza</a></li>
+                  <li><a href="">Lasagne</a></li>
+                  <li><a href="">Sides & Drinks </a></li>
+                 </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+               </ul>
+        </div>
     </div>
+    <div class="container">
+      <div class="slidershow middle2">
+
+        <div class="slides">
+         
+          <div class="slide s1">
+           <a href="#"> <p>Home</p></a>
+          </div>
+          <div class="slide s2">
+            <a href="#"> <p>About</p></a>
+          </div>
+          <div class="slide s3">
+            <a href="#"> <p>Sides & Drinks</p></a>
+          </div>
+          <div class="slide s4">
+            <a href="#"> <p>Lasagnes</p></a>
+          </div>
+          <div class="slide s5">
+            <a href="#"> <p>Contact</p></a>
+          </div>
+        </div>
+  
+        
+      </div>
     </div>
-    <div class="container"><div class="tekst2">SIEMA MAKS</div></div>
     
+
 </body>
 </html>
