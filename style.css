@@ -4,7 +4,9 @@ body{
     background-image:url('tlo1.jpg');
     color:white;
     font-family: 'Poiret One', cursive;
-    overflow:hidden;
+    overflow-x:hidden;
+    
+
 }
 *{
     margin:0;
@@ -16,150 +18,180 @@ body{
     width:100vw;
     height:10vh;
     background:rgba(255,255,255,.3);
+    border-bottom:2px dotted white;
+    animation-name:wejscie;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
-
+.podkreslenie{
+  width:500px;
+  height:3px;
+  background:red;
+  position:absolute;
+  top:60px;
+  left:20px;
+  animation-name:podkreslenie;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-delay:2s;
+}
 
 /* MENU BOCZNE */
 .middle{
-    position: absolute;
-    top: 20%;
-    left: 0;
-    transform: translate(-300vw);
-    transition: transform 0.5s;
-    z-index:999;
-  }
-  input{
-    position: absolute;
-    right:20px;
-    top:0px;
-    opacity: 0;
-    width:50px;
-    height:50px;
-    display:block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-300vw);
+  transition: transform 0.5s;
+  z-index:998;
+  width:100vw;
+  height:50vh;
+  background:rgb(255, 255, 255);
+  display:flex;
+  flex-direction: column;
+}
+input{
+  position: absolute;
+  right:20px;
+  top:0px;
   
-  }
-  .burger{
-    width:50px;
-    height:3px;
-    background:rgb(255, 244, 244);
-    position: absolute;
-    top:20px;
-    right:20px;
-    display:none;
-  }
-  .burger::after{
-    content:'';
-    width:50px;
-    height:3px;
-    background:rgb(255, 255, 255);
-    position: absolute;
-    transform: translateY(10px);
-  }
-  .burger::before{
-    content:'';
-    width:50px;
-    height:3px;
-    background:rgb(255, 255, 255);
-    position: absolute;
-    transform: translateY(-10px);
-    
-  }
-  .burger2{
-    width:50px;
-    height:3px;
-    background:none;
-    position: absolute;
-    top:20px;
-    left:70px;
-  }
-  .burger2::after{
-    content:'';
-    width:50px;
-    height:3px;
-    background:rgb(255, 255, 255);
-    position: absolute;
-    transform: translateY(10px);
-    transform: rotateZ(45deg);
-  }
-  .burger2::before{
-    content:'';
-    width:50px;
-    height:3px;
-    background:rgb(255, 255, 255);
-    position: absolute;
-    transform: translateY(-10px);
-    transform: rotateZ(-45deg);
-  }
-  .check:checked ~ .middle{
-    transform: translateX(0px);
-  }
-  .menu{
-    width: 100vw;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .menu ul{
-      list-style: none;
-  }
-  .menu a{
-      text-decoration: none;
-  }
-  .item{
-    border-top: 1px solid #2980b9;
-    overflow: hidden;
-  }
-  .btn{
-    display: block;
-    padding: 16px 20px;
-    background: #3498db;
-    color: white;
-    position: relative;
-  }
-  .btn:before{
-    content: "";
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background:#3498db;
-    left: 20px;
-    bottom: -7px;
-    transform: rotate(45deg);
-  }
-  .btn i{
-    margin-right: 10px;
-  }
-  .smenu{
-    background: #333;
-    overflow: hidden;
-    transition: max-height 0.3s;
-    max-height: 0;
-  }
-  .smenu a{
-    display: block;
-    padding: 16px 26px;
-    color: white;
-    font-size: 14px;
-    margin: 4px 0;
-    position: relative;
-    text-decoration: none;
-  }
-  .smenu a:before{
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 100%;
-    background: #3498db;
-    left: 0;
-    top: 0;
-    transition: 0.3s;
-    opacity: 0;
-  }
-  .smenu a:hover:before{
-    opacity: 1;
-  }
-  .item:target .smenu{
-    max-height: 10em;
-  }
+  width:50px;
+  height:50px;
+  z-index:999;
+  opacity:0;
+}
+
+.burger{
+  width:50px;
+  height:3px;
+  background:white;
+  position: absolute;
+  top:20px;
+  right:20px;
+  z-index:999;
+  display:none;
+}
+.burger::after{
+  content:'';
+  width:50px;
+  height:3px;
+  background:white;
+  position: absolute;
+  transform: translateY(10px);
+}
+.burger::before{
+  content:'';
+  width:50px;
+  height:3px;
+  background:white;
+  position: absolute;
+  transform: translateY(-10px);
+  
+}
+.burger2{
+  width:50px;
+  height:3px;
+  background:none;
+  position: absolute;
+  top:20px;
+  left:70px;
+}
+.burger2::after{
+  content:'';
+  width:50px;
+  height:3px;
+  background:rgb(255, 255, 255);
+  position: absolute;
+  transform: translateY(10px);
+  transform: rotateZ(45deg);
+}
+.burger2::before{
+  content:'';
+  width:50px;
+  height:3px;
+  background:rgb(255, 255, 255);
+  position: absolute;
+  transform: translateY(-10px);
+  transform: rotateZ(-45deg);
+}
+.check:checked ~ .middle{
+  transform: translateX(0px);
+}
+.menu{
+  width: 100vw;
+  height:85%;
+  overflow: hidden;
+  background:rgb(105, 56, 56);
+  font-size:2em;
+  text-align: center;
+  display:flex;
+  vertical-align: center;
+  align-items: center;
+  align-content: center;
+  transition: all .5s;
+  justify-content: center;
+}
+
+.menu ul li{
+  font-weight: bold;
+ 
+  text-transform: uppercase;
+}
+
+.menu a{
+  text-decoration: none;
+  color:black;
+}
+.menu ul li ul{
+  display:none;
+
+}
+
+.menu ul li:hover ul{
+  display: block;
+
+}
+.menu ul li ul li{
+  font-weight:400 !important;
+  text-transform: none !important;
+  transition: all .5s;
+}
+.socials{
+  width:100vw;
+  height:15%;
+  color:black;
+  text-align: center;
+  line-height: 50px;
+  display:flex;
+  vertical-align: center;
+  align-items: center;
+  align-content: center;
+  transition: all;
+  justify-content: center;
+}
+.socials .fa-facebook-square:hover{
+  color:rgb(49, 79, 209);
+}
+.socials .fa-twitter-square:hover{
+  color:rgb(52, 192, 211);
+}
+.socials .fa-instagram:hover{
+  color:pink;
+}
+
+.socials i{
+  font-size:2em;
+  display:inline-block;
+  transition: all .5s;
+  width:50px;
+  height:50px;
+  align-content: center;
+}
+.socials i:hover{
+  transform: scale(1.2);
+  
+}
+
   /* CCzesc wlasciwa */
   .baner{
       display:flex;
@@ -168,6 +200,10 @@ body{
   .baner .firma{
       font-size:2.5em;
       font-family: 'Indie Flower', cursive;
+      animation-name:firma;
+      animation-duration: 1s;
+      animation-fill-mode: backwards;
+      animation-delay:2.6s;
   }
   .baner .firma img{
     width:50px;
@@ -183,6 +219,10 @@ body{
       position:absolute;
       right:50px;
       z-index:999;
+      animation-name:firma;
+      animation-duration: 1s;
+      animation-fill-mode: backwards;
+      animation-delay: 2.6s;
   }
   .main-menu ul {
     margin: 0px;
@@ -199,15 +239,18 @@ body{
     text-align: center;
     font-size: 20px;
    }
+  
    
    .main-menu ul li a {
     text-decoration: none;
     color: white;
     display: block;
    }
-   
+ 
    .main-menu ul li a:hover {
-    background-color: rgb(148, 189, 53);
+    background-color: rgb(189, 53, 53);
+    text-decoration: underline;
+    font-weight: bold;
    }
    
    .main-menu ul li ul li{
@@ -220,14 +263,16 @@ body{
    .container{
      width:80vw;
      height:90vh;
-     box-shadow: 0px 8px 12px 0px rgba(255,255,255,0.75);
+     box-shadow: 0px 8px 12px 0px rgba(187, 40, 40, 0.75);
      margin:0 auto;
+
    }
    /* SLIDER */
    .slidershow{
     width: 80vw;
     height: 400px;
     overflow: hidden;
+
   }
   .middle2{
     position: absolute;
@@ -272,7 +317,94 @@ body{
     width: 100%;
     height: 100%;
   }
- 
+ .text{
+   width:50vw;
+   height:35vh;
+   animation-name:container;
+   animation-duration: 1s;
+   animation-fill-mode: backwards;
+   animation-delay:3s;
+   position: absolute;
+   bottom:0;
+   text-align: center;
+   font-size:1.3em;
+ }
+ .text p{
+   font-size:2.5em;
+   font-weight: bold;
+   padding:5px;
+ }
+ .text p::after{
+  content: '';
+   width:200px;
+   height:2px;
+   display:flex;
+   background:red;
+   margin-left:36%;
+   animation-name: p;
+   animation-duration: 2s;
+   animation-fill-mode: backwards;
+ }
+ /* ANIMACJE WEJSCIA */
+ @keyframes wejscie{
+   0%{
+     transform: translateX(-1000px);
+ }
+ 80%{
+   transform:translateX(100px);
+ }
+ 100%{
+   transform: translateX(0px);
+ }
+}
+@keyframes podkreslenie{
+  0%{
+    width:1px;
+    height:3px;
+  }
+  100%{
+    width:500px;
+    height:3px;
+  }
+}
+ @keyframes p{
+   0%{
+     width: 1px;
+     height:2px;
+   }
+   100%{
+     width:200px;
+     height:2px;
+   }
+ }
+ @keyframes firma{
+   0%{
+     opacity:0;
+     transform: translateY(-100px);
+   }
+   100%{
+     opacity:1;
+     transform: translateY(0px);
+   }
+ }
+ @keyframes container{
+   0%{
+     opacity:0;
+     transform: translateY(-500px);
+   }
+   100%{
+     opacity:1;
+     transform: translateY(0px);
+   }
+ }
+ @keyframes body{
+   0%{
+     opacity:0;
+   }
+   100%{
+     opacity: 1;
+   }
+ }
   @keyframes animacja{
     0%{
       margin-left:0;
@@ -335,7 +467,7 @@ body{
     background-size:cover;
     background-position: center;
   }
-
+ 
 
 
    @media (max-width:1050px){
@@ -347,11 +479,24 @@ body{
            display:block;
          
        }
+       .middle2{
+         top:47%;
+       }
+       .text{
+         width:80vw;
+         transform: translateY(70px);
+       }
+       .container{
+         height:150vh;
+       }
    }
    @media (max-width:550px){
        .baner{
            font-size:.8em;
        }
+      .text p::after{
+        margin-left:13%;
+      }
        
        
    }
