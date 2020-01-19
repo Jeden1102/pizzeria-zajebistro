@@ -490,6 +490,176 @@ body{
     background-image:url('programista4.jpeg');
     background-size:cover;
 }
+
+.container-three{
+    background:#76FEC5;
+    color:black;
+}
+.container-three h1{
+    text-align: center;
+    transform: translateY(50px);
+}
+.main-three{
+    width:80vw;
+    height:80vh;
+    
+    display:flex;
+    transform: translateY(50px);
+    margin:0 auto;
+}
+.map{
+    width:50%;
+    height:100%;
+    padding:15px;
+}
+.map iframe{
+    width:40vw;
+}
+.map .socials{
+    width:70%;
+    height:20%;
+    
+    display:flex;
+    transform: translateY(30px);
+    margin:0 auto;
+}
+.social{
+    flex:1;
+    border-radius:50%;
+    margin-left:20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+    font-size:70px;
+    background:white;
+    transition: all .5s;
+    min-width:100px;
+}
+.social:hover{
+    transform: scale(1.1);
+    color:white;
+}
+.social-one:hover{
+    background:#4267B2;
+    
+}
+.social-two:hover{
+    background:#1DA1F2;
+}
+.social-three:Hover{
+    background:#24292E;
+}
+.contact-form{
+    width:50%;
+    height:100%;
+}
+
+.contact-form h2{
+    width:100%;
+    font-size:36px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.contact-form .row100{
+    position: relative;
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(autofit,minmax(300px,1fr));
+
+
+}
+.contact-form .row100 .col{
+    position: relative;
+    width:100%;
+    padding:0 10px;
+    margin: 30px 0 10px;
+    transition: .5s;
+
+}
+.contact-form .row100 .inputBox{
+    position:relative;
+    width:100%;
+    height:40px;
+    
+}
+.contact-form .row100 .inputBox input, textarea{
+    position: absolute;
+    width:100%;
+    height:100%;
+    background:transparent;
+    box-shadow:none;
+    border:none;
+    outline:none;
+    font-size:18px;
+    padding:0 10px;
+    z-index:1;
+    color:#000;
+}
+.contact-form .row100 .inputBox .text{
+    position: absolute;
+    top:0;
+    left:0;
+    line-height: 40px;
+    font-size:18px;
+    padding:0 10px;
+    display:block;
+    transition: .5s;
+    pointer-events: none;
+}
+.contact-form .row100 .inputBox input:valid +.text,
+.contact-form .row100 .inputBox input:focus + .text{
+    top:-35px;
+    left: -10px;
+}
+.contact-form .row100 .inputBox .line{
+    position: absolute;
+    bottom:0;
+    display:block;
+    width:100%;
+    height:2px;
+    background:white;
+    transition: .5s;
+    border-radius:2px;
+    pointer-events: none;
+}
+.contact-form .row100 .inputBox input:focus ~ .line,
+.contact-form .row100 .inputBox input:valid ~ .line{
+
+    height:100%;
+}
+.contact-form .row100 .inputBox.textarea {
+    position: relative;
+    width:100%;
+    height:100px;
+    padding: 10px 0;
+}
+.contact-form .row100 .inputBox.textarea textarea{
+    height:100%;
+    resize: none;
+}
+.contact-form .row100 .inputBox textarea:valid +text,
+.contact-form .row100 .inputBox textarea:focus + .text{
+    top:-35px;
+    left: -10px;
+    
+}
+.contact-form .row100 .inputBox textarea:focus ~ .line,
+.contact-form .row100 .inputBox textarea:valid ~ .line{
+
+    height:100%;
+}
+input[type="submit"]{
+    border:none;
+    padding:7px 35px;
+    cursor: pointer;
+    outline: none;
+    font-size:18px;
+    border-radius:2px;
+    transform: translateY(-30px);
+
+}
+
 @media (max-width:821px){
     .container-one{
         height:150vh;
@@ -536,7 +706,7 @@ body{
         font-size:.5em;
         
     }
-    .button-one{}
+    
 }
 @media (max-width:400px){
     .container-one .test{
@@ -566,6 +736,30 @@ body{
        
         
     }
+    .main-three{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-three{
+        height:200vh;
+    }
+    .contact-form{
+        transform: translateY(550px);
+    }
+    .socials{
+        transform: translateX(150px);
+    }
+    .map iframe{
+        min-width:600px;
+        margin-bottom:50px;
+    }
+    .map{
+        transform: translateX(-100px);
+    }
+    .contact-form{
+        width:90vw;
+    }
 }
 @media (max-width:768px){
     .karty .card{
@@ -575,5 +769,23 @@ body{
     .karty .card .imgBx{
         position:relative;
     }
-    
+    .map iframe{
+        min-width:500px;
+    }
+    .map{
+        transform: translateX(-150px);
+    }
+}
+@media (max-width:550px){
+    .map iframe{
+        min-width:400px;
+        transform:translateX(40px);
+    }
+}
+@media (max-width:425px){
+    .map iframe{
+        min-width:300px;
+        transform: translateX(70px);
+    }
+
 }
