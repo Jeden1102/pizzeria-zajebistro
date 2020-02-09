@@ -4,6 +4,11 @@ body{
     overflow-x:hidden;
     color:white;
     font-size:20px;
+    
+}
+html{
+    margin:0;
+    padding:0;
 }
 *{
     margin:0;
@@ -53,7 +58,7 @@ body{
     transition: .3s;
 }
 #check:checked ~ label .burger{
-    background-color:#231F20;
+    background-color:rgb(253, 86, 74);
     
 }
 #check:checked ~ label .burger::after{
@@ -98,7 +103,7 @@ label{
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     overflow:hidden;
 }
 .navigation ul{
@@ -157,7 +162,7 @@ label{
 }
 .navigation p{
     display:inline-block;
-    transform: translateY(150px);
+    transform: translateY(100px);
     color:rgb(219, 184, 184);
     transition: .2s;
 }
@@ -169,7 +174,7 @@ label{
     width:100vw;
     height:12vh;
     background:#231F20;
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
     align-items: center;
@@ -196,6 +201,24 @@ label{
     width:100px;
     text-align: center;
 }
+.baner ul li:hover::before{
+    opacity:1;
+}
+.baner ul li::before{
+    background:Red;
+    
+    background: url(logo.png);
+    background-size: cover;
+    transform: translateX(-30px);
+       content:'';
+    position: absolute;
+    width:25px;
+    height:25px;
+    opacity:0;
+    transition: .3s;
+
+    
+}
 .baner ul li a{
     color:white;
     text-decoration: none;
@@ -204,14 +227,14 @@ label{
 .baner ul li a:hover{
     color:red;
     
-    letter-spacing:2px;
+    
 }
 .slider{
     width:80vw;
     margin:0 auto;
     overflow:hidden;
     height:50vh;
-    
+    transform: translateY(80px);
     
 }
 .slides{
@@ -247,22 +270,77 @@ label{
 .slider .slide-one{
     height:100%;
     width:100vw;
-    background:green;
+    background-image:url('slide-one.jpg');
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.slider .slide-one p{
+    width:100%;
+    background:rgba(0,0,0,.3);
+    font-size:1.5em;
+    text-align: center;
+    padding-right:27%;
+    transition: .3s;
+    
+}
+.slider .slide-two p{
+    width:100%;
+    background:rgba(0,0,0,.3);
+    font-size:1.5em;
+    text-align: center;
+    padding-right:27%;
+    transition: .3s;
+}
+.slider .slide-three p{
+    width:100%;
+    background:rgba(0,0,0,.3);
+    font-size:1.5em;
+    text-align: center;
+    padding-right:27%;
+    transition: .3s;
+}
+.slider p:hover{
+    background:rgba(0,0,0,.6);
+}
+.slider p a {
+    text-decoration: none;
+    color: white;
+    font-size:1.5em;
+    
 }
 .slider .slide-two{
     height:100%;
     width:100vw;
-    background:yellow;
+    width:100vw;
+    background-image:url('slide-two.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content: center;
+    align-items:center;
 }
 .slider .slide-three{
+    display:flex;
+    justify-content: center;
+    align-items:center;
     height:100%;
     width:100vw;
-    background:blue;
+    width:100vw;
+    background-image:url('slide-three.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
+
 .text{
     width:43vw;
     text-align: justify;
     padding-left:20px;
+    transform: translateY(100px);
 }
 .text h2{
     text-align: center;
@@ -271,8 +349,11 @@ label{
     text-transform: uppercase;
     font-size:1.6em;
     position:relative;
-    color:red;
     
+    
+}
+.text h2 i{
+    color:REd;
 }
 
 @media (max-width:1100px){
@@ -287,6 +368,7 @@ label{
     }
     .container-one{
         background-repeat: repeat;
+        height:120vh;
     }
     .slider{
         width:100vw;
@@ -294,6 +376,7 @@ label{
     .text{
         width:55vw;
     }
+
 }
 @media (max-width:700px){
     .baner{
@@ -303,6 +386,7 @@ label{
     .text{
         width:90vw;
     }
+    
     
 }
 @media (max-width:560px){
@@ -325,7 +409,7 @@ label{
 }
 @media (max-width:450px){
     .container-one{
-        height:110vh;
+        height:130vh;
     }
     .baner{
         height:20vh;
