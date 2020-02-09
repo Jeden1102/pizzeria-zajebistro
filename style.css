@@ -4,7 +4,7 @@ body{
     overflow-x:hidden;
     color:white;
     font-size:20px;
-    
+    width:100vw;
 }
 html{
     margin:0;
@@ -58,7 +58,7 @@ html{
     transition: .3s;
 }
 #check:checked ~ label .burger{
-    background-color:rgb(253, 86, 74);
+    background-color:#F85C50;
     
 }
 #check:checked ~ label .burger::after{
@@ -72,33 +72,34 @@ label:hover .burger{
 }
 label{
     width:50px;
-    height:50px;
-    z-index:2;
+    height:100px;
+    z-index:3;
     display:none;
     position: absolute;
-    right:20px;
-    top:20px;
-    padding-top:20px;
+    right:30px;
+    top:-20px;
+    
+    padding-top:70px;
+    p
+    
 }
 .side-menu{
     width:100vw;
     height:100vh;
     background:#F85C50;
     position: absolute;
-    top:0;
+    top:12vh;
     left:0;
     transform: translateX(-100vw);
     transition:.5s;
+    z-index:2;
 }
 #check:checked ~ .side-menu{
  
     transform: translateX(0);
  
 }
-#check:checked ~ .container-one{
-  
-    transform: translateX(150vw) rotateZ(-90deg);
-}
+
 .navigation{
     display:flex;
     align-items: center;
@@ -235,6 +236,7 @@ label{
     overflow:hidden;
     height:50vh;
     transform: translateY(80px);
+    box-shadow:0 0 6px 0 white;
     
 }
 .slides{
@@ -395,7 +397,7 @@ label{
     }
     .burger{
         right:-15px;
-        top:40px;
+        top:80px;
     }
 }
 @media (max-width:500px){
@@ -415,15 +417,18 @@ label{
         height:20vh;
         line-height:55px;
     }
-    .burger{
-        top:0;
-        left:0;
-    }
+    
     .baner h2{
         padding-left:50px;
     }
     #check:checked ~ .container-one{
   
         transform: translateX(170vw) rotateZ(-90deg);
+    }
+}
+@media (max-width:560px){
+    #check:checked ~ label .burger{
+        background-color:black;
+        
     }
 }
