@@ -58,7 +58,7 @@ html{
     transition: .3s;
 }
 #check:checked ~ label .burger{
-    background-color:#F85C50;
+    background-color:#231F20;
     
 }
 #check:checked ~ label .burger::after{
@@ -421,14 +421,14 @@ label{
     .baner h2{
         padding-left:50px;
     }
-    #check:checked ~ .container-one{
-  
-        transform: translateX(170vw) rotateZ(-90deg);
-    }
+   .side-menu{
+       top:20vh;
+   }
+    
 }
 @media (max-width:560px){
     #check:checked ~ label .burger{
-        background-color:black;
+        background-color:#231F20;
         
     }
 }
