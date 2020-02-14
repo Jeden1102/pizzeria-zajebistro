@@ -368,10 +368,11 @@ html{
     width:100vw;
     height:100vh;
     background-position: left bottom;
+    
 }
 #nagl{
     position: absolute;
-    top:100px;
+    top:130px;
     font-size:3.5em;
     left:30vw;
     font-family: 'Dancing Script', cursive;
@@ -400,7 +401,7 @@ html{
     width:40vw;
     height:5vh;
     
-    top:28vh;
+    top:38vh;
     left:18vw;
     position: absolute;
     display:Flex;
@@ -473,16 +474,16 @@ html{
     
 }
 .pizza-box{
-    height:65vh;
+    height:55vh;
     width:60vw;
     background-image:url('menu-bg2.jpg');
     position: absolute;
     left:-60vw;
     transition: .3s;
-    top:35vh;
+    top:45vh;
     color:white;
     text-align: center;
-    
+    box-shadow:0 0 10px 1px white;
     border-radius:0 20% 20% 0;
 }
 input{
@@ -505,47 +506,73 @@ input{
     padding:10px;
 }
 .napoje-box{
-    height:65vh;
+    height:55vh;
     width:60vw;
     background-image:url('menu-bg2.jpg');
     position: absolute;
     left:-60vw;
     transition: .3s;
-    top:35vh;
+    top:45vh;
     text-align: center;
-  
+    box-shadow:0 0 10px 1px white;
     border-radius:0 20% 20% 0;
 }
 .dodatki-box{
-    height:65vh;
+    height:55vh;
     width:60vw;
     background-image:url('menu-bg2.jpg');
     position: absolute;
     left:-60vw;
     transition: .3s;
-    top:35vh;
+    top:45vh;
     text-align: center;
-    
+    box-shadow:0 0 10px 1px white;
     border-radius:0 20% 20% 0;
 }
 .lasagne-box{
-    height:65vh;
+    height:55vh;
     width:60vw;
     background-image:url('menu-bg2.jpg');
     position: absolute;
     left:-60vw;
     transition: .3s;
-    top:35vh;
+    top:45vh;
     text-align: center;
-    
+    box-shadow:0 0 10px 1px white;
     border-radius:0 20% 20% 0;
+}
+.pizza-box table{
+    margin: 0 auto;
 }
 .pizza-box td{
     border:1px solid white;
     padding:6px;
     width:100px;
 }
-
+.lasagne-box table{
+    margin: 0 auto;
+}
+.lasagne-box td{
+    border:1px solid white;
+    padding:6px;
+    width:100px;
+}
+.dodatki-box table{
+    margin: 0 auto;
+}
+.dodatki-box td{
+    border:1px solid white;
+    padding:6px;
+    width:100px;
+}
+.napoje-box table{
+    margin: 0 auto;
+}
+.napoje-box td{
+    border:1px solid white;
+    padding:6px;
+    width:100px;
+}
 .pizza-box tr:first-child{
     
     background-color: rgb(172, 85, 85);
@@ -553,7 +580,104 @@ input{
 .pizza-box #glowna td{
     font-weight: bold;
 }
+.lasagne-box tr:first-child{
+    
+    background-color: rgb(172, 85, 85);
+}
+.lasagne-box #glowna td{
+    font-weight: bold;
+}
+.dodatki-box tr:first-child{
+    
+    background-color: rgb(172, 85, 85);
+}
+.dodatki-box #glowna td{
+    font-weight: bold;
+}
+.napoje-box tr:first-child{
+    
+    background-color: rgb(172, 85, 85);
+}
+.napoje-box #glowna td{
+    font-weight: bold;
+}
+/* KOTANKT */
+
+.main{
+    width:80vw;
+    height:80vh;
+   
+    transform: translateY(13vh);
+    margin:0 auto;
+    display:flex;
+}
+.map-socials{
+    width:50%;
+    height:100%;
+   
+}
+.contact-form{
+    width:50%;
+    height:100%;
+    background-color: RED;
+}
+.map{
+    width:100%;
+    height:60%;
+    
+}
+.socials{
+    width:100%;
+    height:40%;
+   
+    display:flex;
+    overflow:hidden;
+}
+.picture{
+    width:30%;
+    height:100%;
+    
+   
+}
+.picture a{
+    color:white;
+    text-decoration: none;
+}
+.social-box{
+    height:33%;
+    width:100%;
+    
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.social-box:hover{
+    background:rgba(255,255,255,.3);
+}
+
+.picture a:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+   
+}
+.picture a{
+    font-size:60px;
+}
+.else{
+    width:70%;
+    height:100%;
+   
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.else i{
+    font-size: 50px;
+    padding:10px;
+}
 @media (max-width:1100px){
+   
     .labelki{
         width:70vw;
     }
@@ -618,24 +742,53 @@ input{
     }
     .labelki{
         flex-direction: column;
+        top:30vh;
     }
     .container-two{
         height:140vh;
     }
     .pizza-box{
         top:60vh;
+        height:65vh;
     }
     .lasagne-box{
         top:60vh;
+        height:65vh;
     }
     .dodatki-box{
         top:60vh;
+        height: 65vh;
     }
     .napoje-box{
         top:60vh;
+        height:65vh
     }
     #nagl{
         left:40vw;
+        
+    }
+    .pizza-box td{
+        width:100px;
+    }
+}
+@media (max-width:377px){
+    .container-two{
+        height:150vh;
+    }
+    .labelki{
+        top:50vh;
+    }
+    .pizza-box{
+        top:78vh;
+    }
+    .lasagne-box{
+        top:78vh;
+    }
+    .dodatki-box{
+        top:78vh;
+    }
+    .napoje-box{
+        top:78vh;
     }
 }
 @media (max-width:500px){
