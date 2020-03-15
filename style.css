@@ -1,0 +1,247 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Baloo Chettan 2', cursive;
+    overflow-x:hidden;
+    scroll-behavior: smooth;
+}
+.gora{
+    width:50px;
+    height:50px;
+    position:fixed;
+    right:50px;
+    bottom:50px;
+    background:white;
+    border-radius:15%;
+    display:grid;
+    display:none;
+    place-content: center;
+    z-index:2;
+}
+.potem{
+    display:block;
+    
+    display:grid;
+    place-content: center;
+}
+.potem img{
+    width:40px;
+    transform: rotate(0) !important;
+    padding:0 !important;
+    margin :0 !important;
+}
+.gora img{
+    width:40px;
+    transform: rotate(0) !important;
+    padding:0 !important;
+    margin :0 !important;
+}
+#back{
+    transform: translateY(-500px);
+    opacity: 0;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    
+}
+#container-one{
+    background:white;
+    color:black;
+    display:grid;
+    place-content: center;
+    transition: .5s;
+}
+#container-one img{
+    transform: rotate(-30deg);
+    padding-right:10px;
+    margin-left:-10px;
+}
+#container-one.nabok{
+    transform: translateX(100vw);
+}
+#container-one h1{
+    font-size:2.3rem;
+    z-index:2;
+    text-align: center;
+    letter-spacing: 2px;
+}
+#zakrywacz{
+    width:100vw;
+    height:10vh;
+    background:black;
+    transform: translate(-95vw,-10vh);
+    animation-name:zakrywacz;
+    animation-delay:3s;
+    animation-duration:3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+#zakrywacze{
+    width:100vw;
+    height:300vh;
+    
+    position:absolute;
+    top:100vh;
+    left:0;
+   
+}
+.zakrywacz-one{
+    width:100vw;
+    height:100vh;
+    background:black;
+    transform: translate(-100vw);
+    transition: 2s;
+    display:grid;
+    place-content: center;
+    color:white;
+}
+.zakrywacz-two{
+    width:100vw;
+    height:100vh;
+    background:white;
+    transform: translate(-100vw);
+    transition: 2s;
+    display:grid;
+    place-content: center;
+}
+.zakrywacz-three{
+    width:100vw;
+    height:100vh;
+    background:black;
+    transform: translate(-100vw);
+    transition: 2s;
+    display:grid;
+    place-content: center;
+    color:white;
+}
+.poZakrywacz{
+    transform:translate(0);
+}
+@keyframes zakrywacz {
+    0%{
+        transform: translate(-95vw,-10vh);
+    }
+    100%{
+        transform: translate(0vw,-10vh);
+    }
+}
+#test{
+    animation-name:odkrywacz;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    animation-delay:3.5s;
+    animation-iteration-count: 1;
+}
+@keyframes odkrywacz {
+    0%{
+        color:black;
+    }
+    100%{
+        color:white;
+    }
+}
+#container-one .baner{
+    width:100%;
+    height:8vh;
+    background:black;
+    position: fixed;
+    top:0;
+    left:0;
+    display:Flex;
+    align-items: center;
+    color:white;
+    z-index:3;
+    transition: .5s;
+}
+.baner-second{
+    height:5vh !important;
+    display:grid;
+    place-content: center;
+    transition: .5s;
+
+}
+.baner-second ul{
+    display:none !important;
+}
+.baner-second h1{
+    font-size:2.5rem !important;
+    padding-bottom:13px;
+}
+.baner-second img{
+    width:35px;
+}
+#container-one .baner h1{
+    padding-left:30px;
+    font-size:3.5rem;
+}
+#container-one ul{
+    display:flex;
+    list-style-type: none;
+    position: absolute;
+    right:50px;
+    top:8px;
+}
+#container-one ul li{
+    margin:0 20px;
+    font-size:1.5rem;
+}
+#burger{
+    width:50px;
+    height:50px;
+    background:red;
+    position: absolute;
+    right:12px;
+    top:12px;
+    display:none;
+}
+#boczne{
+    height:100vh;
+    width:100vw;
+    background:black;
+    position: absolute;
+    top:8vh;
+    left:-100vw;
+    transition: .5s ease-in-out;
+    display:grid;
+    place-content: center;
+    color:white;
+}
+#boczne ul{
+    display:block !important;
+    position: unset;
+    font-size:3rem;
+}
+#boczne ul li{
+    font-size:4rem;
+    background:black;
+    line-height:120px;
+}
+#boczne.drugie-menu{
+    left:0vw;
+}
+#container-two{
+    background:white;;
+    color:white;
+}
+#container-three{
+    background:black;
+    color:black;
+}
+#container-four{
+    background:white;
+    color:white;
+}
+@media (max-width:850px){
+    #container-one ul{
+        display:none;
+    }
+    #burger{
+        display:block;
+    }
+}
