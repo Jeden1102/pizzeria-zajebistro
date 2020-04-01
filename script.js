@@ -1,86 +1,68 @@
-// MENU
-burger.onclick = side;
-function side(){
+function delta(){
+    let varOne = parseInt(document.querySelector("#value1").value);
+    let varTwo= parseInt(document.querySelector("#value2").value);
+    let varThree= parseInt(document.querySelector("#value3").value);
+    let wynik = document.querySelector(".wynik");
     
-    boczne.classList.toggle('drugie-menu');
+    let suma = varTwo*varTwo-(4*varOne*varThree);
+    
+    
+    wynik.innerHTML=suma;
    
+   
+    deltaTwo();
 }
-//SCROLL BANER
-
-function bannerAppear(){
-    var introText = document.querySelector('.baner');
-    var container = document.querySelector('.container');
-    var containerPosition = container.getBoundingClientRect().bottom;
-    var introPosition = introText.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight /999;
+function deltaTwo(){
+    let wynik = document.querySelector(".wynik");
+    let delta = wynik.innerHTML;
+    let piewiastek = document.querySelector(".pierw");
+    let pierwiastki = document.querySelector(".pierwiastki");
+    
+    piewiastek.innerHTML=Math.sqrt(delta);
   
-    if(containerPosition < screenPosition){
-        introText.classList.add('baner-second');
+    if(delta<0){
+        piewiastek.innerHTML="Delta ujemna";
     }
-    else{
-        introText.classList.remove('baner-second');
+    if(delta==0){
+        pierwiastekOne();
     }
+    if(delta>0){
+        pierwiastkiDwa();
+    }
+    kolorowanie();
+    
 }
-window.addEventListener('scroll', bannerAppear);
-
-//SCROLL POWROT 
-
-function upAppear(){
-    var introText = document.querySelector('.gora');
-    var container = document.querySelector('.container');
-    var containerPosition = container.getBoundingClientRect().bottom;
-    var introPosition = introText.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight /2;
+function pierwiastekOne(){
+    let dol = document.querySelector('.pierwiastek-dol');
+    let b = document.querySelector('.b');
+    let delta = document.querySelector('.delta');
+    let varOne = parseInt(document.querySelector("#value1").value);
+    let varTwo= parseInt(document.querySelector("#value2").value);
+    b.innerHTML = -varTwo;
+    dol.innerHTML = 2*varOne;
+}
+function pierwiastkiDwa(){
+    
+    let b = document.querySelector('.b');
+    let delta = document.querySelector('.delta');
+    let c = document.querySelector('.c');
+    let delta2 = document.querySelector('.delta2');
+    let dol = document.querySelector('.pierwiastek-dol');
+    let dol2 = document.querySelector('.pierwiastek-dol2');
+    let varOne = parseInt(document.querySelector("#value1").value);
+    let varTwo= parseInt(document.querySelector("#value2").value);
+    let wynik = parseInt(document.querySelector(".wynik").innerHTML);
+    b.innerHTML = -varTwo;
+    delta.innerHTML = "+" + "√" + wynik;
+    dol.innerHTML = 2*varOne;
   
-    if(containerPosition < screenPosition){
-        introText.classList.add('potem');
-    }
-    else{
-        introText.classList.remove('potem');
-    }
+    c.innerHTML = -varTwo;
+    delta2.innerHTML = "-" +"√"+wynik;
+    dol2.innerHTML = 2*varOne;
 }
-window.addEventListener('scroll', upAppear);
-
-//ZAKRYWACZE 
-
-function zakrywaczFest(){
-    var introText = document.querySelector('.zakrywacz-one');
-    var container = document.querySelector('.container');
-    var containerPosition = container.getBoundingClientRect().bottom;
-    var introPosition = introText.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight /2;
-    console.log('eluwa');
-    if(containerPosition < screenPosition){
-        introText.classList.add('poZakrywacz');
-    }
-   
+function kolorowanie(){
+    let wynik = document.querySelector(".wynik");
+    let wynik2 = document.querySelector(".pierw");
+    wynik.style.background="black";
+    wynik2.style.background="black";
 }
-window.addEventListener('scroll', zakrywaczFest);
-
-function zakrywaczFest2(){
-    var introText = document.querySelector('.zakrywacz-two');
-    var container = document.querySelector('.zakrywacz-one');
-    var containerPosition = container.getBoundingClientRect().bottom;
-    var introPosition = introText.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight /1.5;
-    console.log('eluwa');
-    if(containerPosition < screenPosition){
-        introText.classList.add('poZakrywacz');
-    }
-   
-}
-window.addEventListener('scroll', zakrywaczFest2);
-
-function zakrywaczFest3(){
-    var introText = document.querySelector('.zakrywacz-three');
-    var container = document.querySelector('.zakrywacz-two');
-    var containerPosition = container.getBoundingClientRect().bottom;
-    var introPosition = introText.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight /1.5;
-    console.log('eluwa');
-    if(containerPosition < screenPosition){
-        introText.classList.add('poZakrywacz');
-    }
-   
-}
-window.addEventListener('scroll', zakrywaczFest3);
