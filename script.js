@@ -29,6 +29,9 @@ function deltaTwo(){
     if(delta>0){
         pierwiastkiDwa();
     }
+    if(delta=17){
+        tomekDown();
+    }
     kolorowanie();
     
 }
@@ -65,4 +68,7 @@ function kolorowanie(){
     let wynik2 = document.querySelector(".pierw");
     wynik.style.background="black";
     wynik2.style.background="black";
+}
+function tomekDown(){
+   document.write('Kazik to kamper');
 }
