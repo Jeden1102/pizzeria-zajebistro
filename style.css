@@ -1244,6 +1244,9 @@ input{
     }
 }
 @media (max-width:560px){
+    #spec{
+        height:300vh !important;
+    }
     .baner h2{
         transform: translate(-20px,-15px);
     }
@@ -1256,7 +1259,7 @@ input{
         top:30vh;
     }
     .container-two{
-        height:150vh;
+        height:190vh;
     }
    
     .right-top{
@@ -1264,19 +1267,19 @@ input{
     }
     .pizza-box{
         top:60vh;
-        height:65vh;
+        height:100vh !important;
     }
     .lasagne-box{
         top:60vh;
-        height:65vh;
+        height:100vh !important;
     }
     .dodatki-box{
         top:60vh;
-        height: 65vh;
+        height:100vh !important;
     }
     .napoje-box{
         top:60vh;
-        height:65vh
+        height:100vh !important;
     }
     #nagl{
         left:40vw;
@@ -1335,7 +1338,7 @@ input{
         transform: translateX(-30px);
     }
     #spec{
-        height:300vh !important;
+        height:400vh !important;
     }
     .main{
         height:150vh !important;
@@ -1344,7 +1347,7 @@ input{
         transform: translateY(900px) !important;
     }
     .container-two{
-        height:160vh !important;
+        height:240vh !important;
     }
     .main-left{
         height:100vh;
@@ -1415,16 +1418,16 @@ input{
     height:240vh !important;
 }
 .pizza-box{
-    height:70vh !important;
+    height:100vh !important;
 }
 .lasagne-box{
-    height:70vh !important;
+    height:100vh !important;
 }
 .dodatki-box{
-    height:70vh !important;
+    height:100vh !important;
 }
 .napoje-box{
-    height:70vh !important;
+    height:100vh !important;
 }
 }
 @media (max-width:560px){
